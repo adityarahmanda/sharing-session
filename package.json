@@ -1,0 +1,35 @@
+{
+  "name": "sharing-session",
+  "version": "1.0.0",
+  "type": "module",
+  "keywords": [
+    "slidev-theme",
+    "slidev"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "build": "slidev build",
+    "dev": "slidev --open",
+    "export": "slidev export",
+    "screenshot": "slidev export --format png"
+  },
+  "dependencies": {
+    "@slidev/types": "^52.0.0",
+    "slidev-addon-animattr": "^1.1.2"
+  },
+  "devDependencies": {
+    "@slidev/cli": "^52.0.0"
+  },
+  "//": "Learn more: https://sli.dev/guide/write-theme.html",
+  "slidev": {
+    "colorSchema": "light",
+    "defaults": {
+      "fonts": {
+        "sans": "Bebas Neue, Noto Sans Kawi",
+        "mono": "Fira Code"
+      }
+    }
+  }
+}
