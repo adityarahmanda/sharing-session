@@ -27,16 +27,8 @@ components:
 
 # Logika
 
-<shuffled 
-  style="font-size: 24rem; line-height:1; margin-bottom: -3rem;" 
-  text="Logika" 
-  :slide=1
-/>
-<shuffled 
-  class="text-4xl" 
-  text="Aditya Nur Juang Rahmanda"
-  :slide=1
-/>
+<shuffled style="font-size: 24rem; line-height:1; margin-bottom: -3rem;" :slide=1>Logika</shuffled>
+<shuffled class="text-4xl" :slide=1>Aditya Nur Juang Rahmanda</shuffled>
 
 ---
 layout: default
@@ -72,11 +64,12 @@ class: bg-secondary text-primary flex flex-col justify-center
 
 <shuffled 
   class="inline-grid text-9xl text-red-500"
-  text="Masuk Akal != Fakta"
   :mark="{ type: 'underline', brackets: ['left', 'right'], color: '#000', strokeWidth: 8 }"
   :markAt=0
   :slide=3
-/>
+>
+  Masuk Akal != Fakta
+</shuffled>
 
 ---
 layout: default
@@ -85,11 +78,11 @@ class: bg-secondary text-primary grid grid-cols-2 gap-4
 
 # Masuk Akal != Fakta - 2
 
-<div v-click>
+<div>
   <img src="/ronikerja.png" class="w-full h-auto rounded-3 mb-2" />
   <span class="font-bold text-3xl">Sosok pekerja LZY sedang giat berkreasi</span>
 </div>
-<x tweetId="1438695995970256897" :tweetMaxWidth=400 v-click/>
+<x tweetId="1438695995970256897" :tweetMaxWidth=400 />
 
 ---
 layout: default
@@ -128,35 +121,88 @@ class: bg-primary text-white text-9xl
 
 # Kata-kata
 
-<div>
-  <shuffled class="slidev-vclick-true-hidden" text="K" v-click.hide="1" />
-  <shuffled class="slidev-vclick-true-hidden" text="Keep" v-click="1" v-click.hide="2" />
-  <shuffled class="slidev-vclick-true-hidden" text="Kesederhanaan" v-click="2" />
-</div>
-<div>
-  <shuffled class="slidev-vclick-true-hidden" text="I" v-click.hide="1" />
-  <shuffled class="slidev-vclick-true-hidden" text="It" v-click="1" v-click.hide="2"  />
-  <shuffled class="slidev-vclick-true-hidden" text="Itu" v-click="2" />
-</div>
-<div>
-  <shuffled class="slidev-vclick-true-hidden" text="S" v-click.hide="1" />
-  <shuffled class="slidev-vclick-true-hidden" text="Simple" v-click="1" v-click.hide="2" />
-  <shuffled class="slidev-vclick-true-hidden" text="Selalu" v-click="2" />
-</div>
-<div>
-  <shuffled class="slidev-vclick-true-hidden" text="S" v-click.hide="1" />
-  <shuffled class="slidev-vclick-true-hidden" text="Stupid" v-click="1" v-click.hide="2" />
-  <shuffled class="slidev-vclick-true-hidden" text="Solusinya" v-click="2" />
+<div class="relative w-full h-full" >
+  <annotate 
+    class="absolute h-full" 
+    :mark="{ type: 'bracket', brackets: ['left', 'right'], color: '#bfee1d', strokeWidth: 10 }"
+    :slide="7"
+    style="width: 5rem"
+  />
+  <!-- <img 
+    class="absolute right-0 bottom-0"
+    src="/adit-outline.png"
+    v-motion
+    :initial="{ width: 500, x: 25, y: 2000 }"
+    :enter="{ y: 700 }"
+    :click-2="{ x: 125, y: 800 }"
+  /> -->
+  <div class="flex">
+    <shuffled 
+      class="grid-inline slidev-vclick-true-hidden text-center px-4 mr-6"
+      :slide=7 
+      :sortAt=0 
+      :showAt=0
+      style="width: 5rem"
+    >K</shuffled>
+    <!-- <shuffled class="grid-inline slidev-vclick-true-hidden" v-click.hide="1" :slide=7 :sortAt=0 :showAt=0>???</shuffled> -->
+    <shuffled class="grid-inline slidev-vclick-true-hidden" v-click.hide="2" :slide=7 :sortAt=1 :showAt=1>eep</shuffled>
+    <shuffled class="grid-inline slidev-vclick-true-hidden" v-click="2" :slide=7 :sortAt=2 :showAt=2>esederhanaan</shuffled>
+  </div>
+  <div class="flex">
+    <shuffled 
+      class="grid-inline slidev-vclick-true-hidden text-center px-4 mr-6"
+      :slide=7 
+      :sortAt=0 
+      :showAt=0
+      style="width: 5rem"
+    >I</shuffled>
+    <!-- <shuffled class="grid-inline slidev-vclick-true-hidden" v-click.hide="1" :slide=7 :sortAt=0 :showAt=0>?</shuffled> -->
+    <shuffled class="grid-inline slidev-vclick-true-hidden" v-click.hide="2" :slide=7 :sortAt=1 :showAt=1>t</shuffled>
+    <shuffled class="grid-inline slidev-vclick-true-hidden" v-click="2" :slide=7 :sortAt=2 :showAt=2>tu</shuffled>
+  </div>
+  <div class="flex">
+    <shuffled 
+      class="grid-inline slidev-vclick-true-hidden text-center px-4 mr-6"
+      :slide=7 
+      :sortAt=0 
+      :showAt=0
+      style="width: 5rem"
+    >S</shuffled>
+    <!-- <shuffled class="grid-inline slidev-vclick-true-hidden" v-click.hide="1" :slide=7 :sortAt=0 :showAt=0>?????</shuffled> -->
+    <shuffled class="grid-inline slidev-vclick-true-hidden" v-click.hide="2" :slide=7 :sortAt=1 :showAt=1>imple</shuffled>
+    <shuffled class="grid-inline slidev-vclick-true-hidden" v-click="2" :slide=7 :sortAt=2 :showAt=2>elalu</shuffled>
+  </div>
+  <div class="flex">
+    <shuffled 
+      class="grid-inline slidev-vclick-true-hidden text-center px-4 mr-6"
+      :slide=7 
+      :sortAt=0 
+      :showAt=0
+      style="width: 5rem"
+    >S</shuffled>
+    <!-- <shuffled class="grid-inline slidev-vclick-true-hidden" v-click.hide="1" :slide=7 :sortAt=0 :showAt=0>?????</shuffled> -->
+    <shuffled class="grid-inline slidev-vclick-true-hidden" v-click.hide="2" :slide=7 :sortAt=1 :showAt=1>tup*d</shuffled>
+    <shuffled class="grid-inline slidev-vclick-true-hidden" v-click="2" :slide=7 :sortAt=2 :showAt=2>olusinya</shuffled> 
+  </div>
 </div>
 
 ---
 layout: default
-class: bg-primary text-white text-9xl
+class: bg-primary text-white  text-center flex justify-center items-center
 ---
 
 # Penutup
 
-<shuffled tag="span" text="Sekian dan" />
-<shuffled tag="span" text="Terima Kasih" />
+<annotate 
+  :mark="{ type: 'highlight', color: '#bfee1d', strokeWidth: 10 }"
+  class="text-9xl text-neutral-900 px-10 py-4" 
+  :slide=8 
+  v-motion
+  :initial="{ opacity: 0 }"
+  :enter="{ opacity: 1 }"
+  :leave="{ opacity: 0 }"
+>
+  Sekian dan <br />Terima Kasih
+</annotate>
 
 ---

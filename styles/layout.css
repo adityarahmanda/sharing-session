@@ -70,43 +70,55 @@ table + h2 {
   --glitch-translate: -2px; 
 }
 
-.glitch span::after {
+.glitch span .original-text,
+.glitch span .shuffled-text {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+/* glitch default hidden */
+.glitch span .original-text,
+.glitch span .shuffled-text {
+  opacity: 0;  
+}
+
+/* unsorted glitch show shuffled */
+.glitch.show:not(.sort) span .original-text {
   opacity: 0;
 }
 
-.glitch span::after {
-  content: attr(data-shuffled);
-}
-
-.glitch.show:not(.sort) span::after {
+.glitch.show:not(.sort) span .shuffled-text {
   opacity: 1;
 }
 
-.glitch span::before {
-  content: attr(data-original);
-}
-
-.glitch.show span::before {
+/* sorted glitch show original */
+.glitch.show span .original-text {
   opacity: 1;
 }
 
-.glitch.show:not(.sort) span::before {
+.glitch.show span .shuffled-text {
   opacity: 0;
 }
 
-.glitch.sort:not(.slidev-vclick-hidden:not(.anim-disabled)) span::after {
-  animation: showAfterDelay 0s forwards, glitch .1s .4s forwards;
+/* display none when true-hidden */
+.glitch.slidev-vclick-true-hidden:not(.show),
+.glitch.slidev-vclick-true-hidden.slidev-vclick-hidden {
+  display: none;
 }
 
-.glitch.sort:not(.slidev-vclick-hidden:not(.anim-disabled)) span::before {
+/* start glitch animation when sorted and anim not disabled */
+.glitch.sort:not(.slidev-vclick-hidden:not(.anim-disabled)) .original-text {
   animation: showAfterDelay .5s forwards;
 }
 
+.glitch.sort:not(.slidev-vclick-hidden:not(.anim-disabled)) .shuffled-text {
+  animation: showAfterDelay 0s forwards, glitch .1s .4s forwards;
+}
+
+/* disable glitch animation when hidden */
 .glitch.slidev-vclick-hidden span::before,
 .glitch.slidev-vclick-hidden span::after {
   animation: none;

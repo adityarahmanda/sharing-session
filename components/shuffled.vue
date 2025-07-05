@@ -11,21 +11,28 @@
     :markAt="markAt"
     :hideMarkAt="hideMarkAt"
     :slide="slide"
-    v-bind="$attrs"
   >
-    <span style="--index: 0;" :data-original="text" :data-shuffled="shuffledTexts[0]"></span>
-    <span style="--index: 1;" :data-original="text" :data-shuffled="shuffledTexts[1]"></span>
-    <span style="--index: 2;" :data-original="text" :data-shuffled="shuffledTexts[2]"></span>
+    <span ref="slotParent" class="opacity-0"><slot></slot></span>
+    <span style="--index: 0;">
+      <span class="original-text">{{ originalText }}</span>
+      <span class="shuffled-text">{{ shuffledTexts[0] }}</span>
+    </span>
+    <span style="--index: 1;">
+      <span class="original-text">{{ originalText }}</span>
+      <span class="shuffled-text">{{ shuffledTexts[1] }}</span>
+    </span>
+    <span style="--index: 2;">
+      <span class="original-text">{{ originalText }}</span>
+      <span class="shuffled-text">{{ shuffledTexts[2] }}</span>
+    </span>
   </annotate>
 </template>
 
 <script setup>
 import { useNav } from '@slidev/client';
-
-const { clicks, currentSlideNo } = useNav();
+import { ref, onMounted } from 'vue';
 
 const props = defineProps({
-  text: String,
   showAt: {
     type: Number,
     default: 0
@@ -56,7 +63,17 @@ const props = defineProps({
   }
 });
 
-const shuffledTexts = Array.from({ length: 3 }, () => shuffleString(props.text));
+const { clicks, currentSlideNo } = useNav();
+const slotParent = ref(null);
+const originalText = ref('');
+const shuffledTexts = ref(['', '', '']);
+
+onMounted(() => {
+  originalText.value = slotParent.value?.textContent || '';
+  for (let i = 0; i < 3; i++) {
+    shuffledTexts.value[i] = shuffleString(originalText.value);
+  }
+});
 
 function shuffleString(str) {
   const splitted = str.split(' ');
