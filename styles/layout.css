@@ -19,6 +19,33 @@ table + h2 {
   @apply mt-10;
 }
 
+.bg-secondary {
+  background-color: var(--slidev-theme-secondary);
+}
+
+.slidev-vclick-target:is(.anim-disabled) {
+  transition: inherit;
+}
+
+.slidev-vclick-target:not(.anim-disabled) {
+  transition: opacity 500ms ease;
+}
+
+.slidev-vclick-hidden:is(.anim-disabled)  {
+  opacity: 1 !important;
+  pointer-events: inherit !important;
+  user-select: inherit !important;
+}
+
+.slidev-vclick-hidden.slidev-vclick-true-hidden  {
+  display: none !important;
+}
+
+.slidev-vclick-hidden:not(.anim-disabled)  {
+  opacity: inherit;
+  pointer-events: inherit;
+}
+
 .glitch {
   display: grid;
   grid-template-columns: 1fr;
@@ -53,19 +80,30 @@ table + h2 {
 }
 
 .glitch span::after {
-  content: attr(data-translated);
+  content: attr(data-shuffled);
+}
+
+.glitch.show:not(.sort) span::after {
+  opacity: 1;
 }
 
 .glitch span::before {
   content: attr(data-original);
+}
+
+.glitch.show span::before {
   opacity: 1;
 }
 
-.glitch:not(.slidev-vclick-hidden) span::after {
+.glitch.show:not(.sort) span::before {
+  opacity: 0;
+}
+
+.glitch.sort:not(.slidev-vclick-hidden:not(.anim-disabled)) span::after {
   animation: showAfterDelay 0s forwards, glitch .1s .4s forwards;
 }
 
-.glitch:not(.slidev-vclick-hidden) span::before {
+.glitch.sort:not(.slidev-vclick-hidden:not(.anim-disabled)) span::before {
   animation: showAfterDelay .5s forwards;
 }
 
