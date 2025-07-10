@@ -28,7 +28,7 @@
     "colorSchema": "light",
     "defaults": {
       "fonts": {
-        "sans": "Bebas Neue, Noto Sans Kawi",
+        "sans": "Bebas Neue, Noto Sans Javanese, Noto Sans Kawi, Noto Sans Sundanese",
         "mono": "Fira Code"
       }
     }

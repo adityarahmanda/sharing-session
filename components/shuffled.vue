@@ -3,14 +3,14 @@
     ref="root" 
     class="glitch" 
     :class="[
-      currentSlideNo == slide && clicks >= showAt && 'show',
-      currentSlideNo == slide && clicks >= sortAt && 'sort'
+      isActive() && clicks >= showAt && 'show',
+      isActive() && clicks >= sortAt && 'sort'
     ]" 
     style="--stacks: 3;" 
     :mark="mark"
     :markAt="markAt"
     :hideMarkAt="hideMarkAt"
-    :slide="slide"
+    :id="id"
   >
     <span ref="slotParent" class="opacity-0"><slot></slot></span>
     <span style="--index: 0;">
@@ -57,13 +57,13 @@ const props = defineProps({
     type: Number,
     default: -1
   },
-  slide: {
-    type: Number,
-    default: 0
+  id: {
+    type: String,
+    default: ""
   }
 });
 
-const { clicks, currentSlideNo } = useNav();
+const { clicks, currentSlideNo, slides } = useNav();
 const slotParent = ref(null);
 const originalText = ref('');
 const shuffledTexts = ref(['', '', '']);
@@ -83,5 +83,9 @@ function shuffleString(str) {
       .join('');
   });
   return shuffled.join(' ');
+}
+
+function isActive() {
+  return props.id == slides.value[currentSlideNo.value - 1].meta.slide.frontmatter.annotateId;
 }
 </script>

@@ -9,9 +9,13 @@ import { ref, onMounted, watch } from 'vue'
 import { annotate } from 'rough-notation'
 import { useNav } from '@slidev/client'
 
-const { clicks, currentSlideNo } = useNav()
+const { clicks, currentSlideNo, slides } = useNav()
 
 const props = defineProps({
+  id: {
+    type: String,
+    default: ""
+  },
   mark: {
     type: Object,
     default: null
@@ -27,10 +31,6 @@ const props = defineProps({
   hideMarkAt: {
     type: Number,
     default: -1
-  },
-  slide: {
-    type: Number,
-    default: 0
   }
 });
 
@@ -42,7 +42,7 @@ watch([clicks, currentSlideNo], tryAnnotate);
 
 function tryAnnotate() 
 {
-  if (currentSlideNo.value != props.slide) 
+  if (props.id != slides.value[currentSlideNo.value - 1].meta.slide.frontmatter.annotateId) 
   {
     if (annotation)
       annotation.hide();
