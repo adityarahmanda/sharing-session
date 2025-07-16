@@ -36,7 +36,7 @@ const annotateId = "pembuka";
 
 <div class="w-full mt-8">
   <marquee direction="left" class="marquee font-bold text-4xl bg-secondary text-neutral-900" :duration=60>
-  逻辑思维 | ꦩꦶꦏꦶꦂꦭꦺꦴꦒꦶꦱ꧀ | pensar lógicamente | 논리적 사고 | 論理的思考 | 𑼪𑼶𑼒𑼶𑼂𑼭𑼾𑼴𑼔𑼶𑼱𑽁 | التفكير المنطقي | ᮙᮤᮊᮤᮁ ᮜᮧᮌᮤᮞ᮪ | ᨅ ᨙᨑᨛᨄᨗᨀᨗᨑᨛ ᨒᨚᨁᨗᨔᨛ | 
+  inġeþanc rihtlīċ | 逻辑思维 | ꦩꦶꦏꦶꦂꦭꦺꦴꦒꦶꦱ꧀ | pensar lógicamente | 논리적 사고 | <ruby>論<rt>ろん</rt></ruby><ruby>理<rt>り</rt></ruby><ruby>的<rt>てき</rt></ruby><ruby>思<rt>し</rt></ruby><ruby>考<rt>こう</rt></ruby> | 𑼪𑼶𑼒𑼶𑼂𑼭𑼾𑼴𑼔𑼶𑼱𑽁 | التفكير المنطقي | ᮙᮤᮊᮤᮁ ᮜᮧᮌᮤᮞ᮪ | ᨅ ᨙᨑᨛᨄᨗᨀᨗᨑᨛ ᨒᨚᨁᨗᨔᨛ | 
   </marquee>
 </div>
 
@@ -49,7 +49,7 @@ const annotateId = "pembuka";
 
 <div class="w-full mb-8">
   <marquee direction="right" class="font-bold marquee text-4xl bg-secondary text-neutral-900" :duration=60>
-  逻辑思维 | ꦩꦶꦏꦶꦂꦭꦺꦴꦒꦶꦱ꧀ | pensar lógicamente | 논리적 사고 | 論理的思考 | 𑼪𑼶𑼒𑼶𑼂𑼭𑼾𑼴𑼔𑼶𑼱𑽁 | التفكير المنطقي | ᮙᮤᮊᮤᮁ ᮜᮧᮌᮤᮞ᮪ | ᨅ ᨙᨑᨛᨄᨗᨀᨗᨑᨛ ᨒᨚᨁᨗᨔᨛ |
+  inġeþanc rihtlīċ | 逻辑思维 | ꦩꦶꦏꦶꦂꦭꦺꦴꦒꦶꦱ꧀ | pensar lógicamente | 논리적 사고 | <ruby>論<rt>ろん</rt></ruby><ruby>理<rt>り</rt></ruby><ruby>的<rt>てき</rt></ruby><ruby>思<rt>し</rt></ruby><ruby>考<rt>こう</rt></ruby> | 𑼪𑼶𑼒𑼶𑼂𑼭𑼾𑼴𑼔𑼶𑼱𑽁 | التفكير المنطقي | ᮙᮤᮊᮤᮁ ᮜᮧᮌᮤᮞ᮪ | ᨅ ᨙᨑᨛᨄᨗᨀᨗᨑᨛ ᨒᨚᨁᨗᨔᨛ |
   </marquee>
 </div>
 
@@ -61,7 +61,7 @@ const annotateId = "pembuka";
 
 ---
 layout: default
-class: bg-primary text-white
+class: bg-primary text-white flex flex-col justify-center
 annotateId: kilas-balik
 ---
 
@@ -70,6 +70,111 @@ annotateId: kilas-balik
 <script setup>
 const annotateId = "kilas-balik";
 </script>
+
+<div class="text-center text-6xl mb-4">Waktu Kecil, Kalian Pernah Nggak Sih...</div>
+
+<div class="relative mx-auto w-auto h-400px">
+  <img src="/kebongelap.jpg" class="h-full" v-click="1" />
+  <img src="/blekcat.gif" 
+    class="absolute h-100px" 
+    style="left: 50px; top: 100px" 
+    v-click="2"
+  />
+  <img src="/blekcat.gif" 
+    class="absolute h-100px" 
+    style="left: 280px; top: 150px" 
+    v-click="2"
+  />
+  <img src="/blekcat.gif" 
+    class="absolute h-100px" 
+    style="right: 50px; bottom: 100px" 
+    v-click="2"
+  />
+  <img src="/bananananacat.gif" 
+    class="cat anim-disabled absolute left-0 bottom-0 w-150px h-150px" 
+      :data-clicks="$slidev.nav.clicks"
+      v-click="3"
+  />
+  <img src="/bananacat.gif" 
+    class="cat-cry anim-disabled absolute left-0 bottom-0 w-100px h-100px" 
+      :data-clicks="$slidev.nav.clicks"
+      v-click="3"
+  />
+</div>
+
+<style scoped>
+.cat {
+  transform: translate(-20px, 14px) scaleX(-1);
+  filter: opacity(0%);
+}
+
+.cat[data-clicks="0"], .cat[data-clicks="1"] {
+  filter: opacity(100%);
+}
+
+.cat-cry {
+  transform: translate(0, 0px);
+  filter: opacity(0%);
+  transition: all .5 linear;
+}
+
+.cat-cry[data-clicks="2"] {
+  filter: opacity(100%);
+  animation: cat-1 .3s .5s linear;
+}
+
+.cat-cry[data-clicks="3"] {
+  animation: cat-2 1s linear;
+  filter: opacity(0%);
+}
+
+@keyframes cat-1 {
+  0% {
+    transform: translate(0, 0px);
+  }
+  30% {
+    transform: translate(0, -10px);
+  }
+  100% {
+    transform: translate(0, 0px);
+  }
+}
+
+@keyframes cat-2 {
+  0% {
+    transform: translateX(0);
+    filter: opacity(100%);
+  }
+  80% {
+    filter: opacity(100%);
+  }
+  100% {
+    filter: opacity(0%);
+    transform: translateX(520px);
+  }
+}
+</style>
+
+---
+layout: default
+class: bg-primary text-white
+annotateId: memahami
+---
+
+# Memahami
+
+<script setup>
+const annotateId = "memahami";
+</script>
+
+<div class="text-center text-6xl mb-4">Namun Berbekal dengan Pemikiran Logis</div>
+
+<div class="relative w-full h-400px">
+  <img src="/adittaktakutlagidengankebongelap.png" class="absolute h-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" v-click.hide="1" />
+  <img src="/evolusi.png" class="absolute h-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" v-click="[1, 2]" />
+  <img src="/evolusiadit.png" class="absolute h-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" v-click="[2, 3]" />
+  <img src="/ummi.jpeg" class="absolute h-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" v-click="3" />
+</div>
 
 ---
 layout: default
@@ -94,8 +199,8 @@ const annotateId = "definisi";
     /lo·gi·ka/
   </annotate>
   <div class="text-3xl">
-    1. pengetahuan tentang kaidah <span class="slidev-vclick-true-hidden" v-click.hide>berpikir</span>
-    <annotate tag="span" class="slidev-vclick-true-hidden" :mark="{ type: 'highlight', color: '#000', strokeWidth: 8 }" :markAt=1 :id=annotateId v-after>berpikir</annotate>; 
+    1. pengetahuan tentang <span class="slidev-vclick-true-hidden" v-click.hide>kaidah berpikir</span>
+    <annotate tag="span" class="slidev-vclick-true-hidden" :mark="{ type: 'highlight', color: '#000', strokeWidth: 8 }" :markAt=1 :id=annotateId v-after>kaidah berpikir</annotate>; 
     2. jalan pikiran yang <span class="slidev-vclick-true-hidden" v-after.hide>masuk akal</span>
     <annotate tag="span" class="slidev-vclick-true-hidden" :mark="{ type: 'highlight', color: '#000', strokeWidth: 8 }" :markAt=1 :id=annotateId v-after>masuk akal</annotate>;
   </div>
@@ -103,42 +208,43 @@ const annotateId = "definisi";
 
 ---
 layout: default
-class: bg-secondary text-primary flex flex-col justify-center
-annotateId: definisi-2
+class: bg-secondary h-full text-primary flex flex-col justify-center
+annotateId: bagaimana
 ---
 
-# Definisi - 2
+# Bagaimana
 
 <script setup>
-const annotateId = "definisi-2";
+const annotateId = "bagaimana";
 </script>
 
 <shuffled 
-  class="inline-grid text-9xl text-red-500"
+  class="inline-grid mx-auto text-9xl text-red-500"
+  :mark="{ type: 'underline', brackets: ['left', 'right'], color: '#000', strokeWidth: 8 }"
+  :id=annotateId
+>
+  Berpikir Logis Itu
+</shuffled>
+<shuffled 
+  class="inline-grid mx-auto text-9xl text-red-500"
   :mark="{ type: 'underline', brackets: ['left', 'right'], color: '#000', strokeWidth: 8 }"
   :markAt=0
   :id=annotateId
 >
-  Masuk Akal != Fakta
+  Bagaimana?
 </shuffled>
 
 ---
 layout: default
 class: bg-secondary text-primary grid grid-cols-2 gap-4
-annotateId: definisi-3
+annotateId: bagaimana
 ---
 
 # Definisi - 3
 
 <script setup>
-const annotateId = "definisi-3";
+const annotateId = "bagaimana";
 </script>
-
-<div>
-  <img src="/ronikerja.png" class="w-full h-auto rounded-3 mb-2" />
-  <span class="font-bold text-3xl">Sosok pekerja LZY sedang giat berkreasi</span>
-</div>
-<x tweetId="1438695995970256897" :tweetMaxWidth=400 />
 
 ---
 layout: default
@@ -151,34 +257,12 @@ annotateId: kesalahan-berpikir
 const annotateId = "kesalahan-berpikir";
 </script>
 
-<div class="w-full text-center">
-  <p class="text-6xl">Asal Generalisir</p>
-  <p class="text-center">Satu orang begitu, semua orang dianggap begitu juga</p>
-</div>
-<div class="flex gap-8 justify-center mt-6">
-  <img src="/jawahama.jpeg" class="w-auto h-300px" v-click />
-  <img src="/jawachillguy.png" class="w-auto h-300px" v-click />
-</div>
-
 ---
 layout: default
 annotateId: kesalahan-berpikir
 ---
 
 # Kesalahan Berpikir
-
-<script setup>
-const annotateId = "kesalahan-berpikir";
-</script>
-
-<div class="w-full text-center">
-  <p class="text-6xl">Orang Ahli Itu Pasti Bener</p>
-  <p class="text-center">
-    <span v-mark.underline.orange>Pintar2</span> mencerna informasi dari ahli.
-  </p>
-</div>
-
-<img src="/drtirtadepresi.png" class="mx-auto w-auto h-350px" v-click />
 
 ---
 layout: default
@@ -199,6 +283,9 @@ const annotateId = "prinsip-kiss";
     :id="annotateId"
     style="width: 5rem"
   />
+  
+  <img src="/catcium.gif" class="absolute h-400px top-1/2 left-1/2 transform  -translate-y-1/2" />
+
   <div class="flex">
     <shuffled 
       class="grid-inline slidev-vclick-true-hidden text-center px-4 mr-6"
@@ -248,7 +335,7 @@ const annotateId = "prinsip-kiss";
 ---
 layout: default
 class: bg-primary text-white  text-center flex justify-center items-center
-annotateId: Penutup
+annotateId: penutup
 ---
 
 # Penutup
@@ -258,8 +345,8 @@ const annotateId = "penutup";
 </script>
 
 <annotate 
-  :mark="{ type: 'highlight', color: '#bfee1d', strokeWidth: 10 }"
   class="text-9xl text-neutral-900 px-10 py-4" 
+  :mark="{ type: 'highlight', color: '#bfee1d', strokeWidth: 10 }"
   :id="annotateId"
   v-motion
   :initial="{ opacity: 0 }"
@@ -268,5 +355,3 @@ const annotateId = "penutup";
 >
   Sekian dan <br />Terima Kasih
 </annotate>
-
----
