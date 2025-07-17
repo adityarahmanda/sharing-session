@@ -17,7 +17,9 @@
   },
   "dependencies": {
     "@slidev/types": "^52.0.0",
+    "endent": "^2.1.0",
     "rough-notation": "^0.5.1",
+    "vue-mermaid-string": "^7.0.0",
     "vue-tweet": "^2.3.1"
   },
   "devDependencies": {

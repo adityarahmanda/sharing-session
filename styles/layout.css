@@ -3,6 +3,7 @@
   /* can be overrided by uses `themeConfig` option */
   --slidev-theme-primary: #1e01fa;
   --slidev-theme-secondary: #bfee1d;
+  --slidev-theme-sdada: #9ed0ff;
 }
 
 h1 {
