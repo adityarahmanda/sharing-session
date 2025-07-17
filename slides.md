@@ -255,12 +255,12 @@ const annotateId = "sistematis";
 
 <div class="relative w-full mb-8">
   <div class="text-3xl text-center mb-2">Runtutan Ngopi (Alternatif 1)</div>
-  <img src="./kopi-1.svg" />
+  <img src="/kopi-1.svg" />
 </div>
 
 <div class="relative w-full">
   <div class="text-3xl text-center mb-2">Runtutan Ngopi (Alternatif 2)</div>
-  <img src="./kopi-2.svg" />
+  <img src="/kopi-2.svg" />
 </div>
 
 ---
@@ -285,12 +285,12 @@ const annotateId = "masuk-akal";
 
 <div class="relative w-full mb-8">
   <div class="text-3xl text-center mb-2">Ngopi Nggak Masuk Akal</div>
-  <img src="./kopi-error-1.svg" />
+  <img src="/kopi-error-1.svg" />
 </div>
 
 <div class="relative w-full">
   <div class="text-3xl text-center mb-2">Ngopi Nggak Masuk Akal Banget</div>
-  <img src="./kopi-error-2.svg" />
+  <img src="/kopi-error-2.svg" />
 </div>
 
 ---
@@ -387,7 +387,7 @@ const annotateId = "efisien";
 
 <div class="relative w-full">
   <div class="text-3xl text-center mb-2">Ngopi Efisien</div>
-  <img src="./kopi-efisien.svg" class="w-500px mx-auto" />
+  <img src="/kopi-efisien.svg" class="w-500px mx-auto" />
 </div>
 
 ---
