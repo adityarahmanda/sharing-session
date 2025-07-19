@@ -20,12 +20,7 @@ seoMeta:
   twitterTitle: Sharing Session - Aditya Nur Juang Rahmanda
   twitterDescription: Presentasi tentang Logika oleh Aditya Rahmanda untuk Sharing Session LZY - Kamis, 31 Juli 2025
   twitterUrl: https://adityarahmanda.github.io/sharing-session
-components:
-  shuffled: './components/shuffled.vue'
-  annotate: './components/annotate.vue'
-  marquee: './components/marquee.vue'
-  x: './components/x.vue'
-class: bg-primary text-white flex flex-col items-center justify-center
+class: bg-secondary flex flex-col items-center justify-center text-neutral-900
 annotateId: pembuka
 ---
 
@@ -36,15 +31,15 @@ const annotateId = "pembuka";
 </script>
 
 <div class="w-full mt-8">
-  <marquee direction="left" class="marquee font-bold text-4xl bg-secondary text-neutral-900" :duration=60>
+  <marquee direction="left" class="marquee font-bold text-4xl" :duration=60>
   inġeþanc rihtlīċ | 逻辑思维 | ꦩꦶꦏꦶꦂꦭꦺꦴꦒꦶꦱ꧀ | pensar lógicamente | 논리적 사고 | <ruby>論<rt>ろん</rt></ruby><ruby>理<rt>り</rt></ruby><ruby>的<rt>てき</rt></ruby><ruby>思<rt>し</rt></ruby><ruby>考<rt>こう</rt></ruby> | 𑼪𑼶𑼒𑼶𑼂𑼭𑼾𑼴𑼔𑼶𑼱𑽁 | التفكير المنطقي | ᮙᮤᮊᮤᮁ ᮜᮧᮌᮤᮞ᮪ | ᨅ ᨙᨑᨛᨄᨗᨀᨗᨑᨛ ᨒᨚᨁᨗᨔᨛ | 
   </marquee>
 </div>
 
 <div class="flex-grow" />
 
-<shuffled class="anim-disabled text-9xl px-10 whitespace-nowrap" :mark="{ type: 'highlight', color: '#000', strokeWidth: 8 }" :showAt=0 :sortAt=1 :id=annotateId v-click="1">Berpikir Logis</shuffled>
-<shuffled class="text-4xl text-center px-10 whitespace-nowrap" :mark="{ type: 'highlight', color: '#000', strokeWidth: 8 }" :id=annotateId>Aditya Nur Juang Rahmanda</shuffled>
+<shuffled class="anim-disabled text-9xl px-10 whitespace-nowrap text-white" :mark="{ type: 'highlight', color: '#000', strokeWidth: 8 }" :showAt=0 :sortAt=1 :id=annotateId v-click="1">Berpikir Logis</shuffled>
+<shuffled class="text-4xl text-center px-10 whitespace-nowrap text-white" :mark="{ type: 'highlight', color: '#000', strokeWidth: 8 }" :id=annotateId>Aditya Nur Juang Rahmanda</shuffled>
 
 <div class="flex-grow" />
 
@@ -197,7 +192,6 @@ const annotateId = "bagaimana";
 </shuffled>
 <shuffled 
   class="inline-grid mx-auto text-9xl text-red-500 whitespace-nowrap"
-  :markAt=0
   :id=annotateId
 >
   Bagaimana?
@@ -205,7 +199,7 @@ const annotateId = "bagaimana";
 
 ---
 layout: default
-class: bg-secondary text-neutral-900
+class: bg-primary text-white
 annotateId: definisi
 ---
 
@@ -227,15 +221,15 @@ const annotateId = "definisi";
   </annotate>
   <div class="text-3xl">
     1. pengetahuan tentang <span class="slidev-vclick-true-hidden" v-click.hide>kaidah berpikir</span>
-    <annotate tag="span" class="slidev-vclick-true-hidden" :mark="{ type: 'highlight', color: '#9ed0ff', strokeWidth: 8 }" :markAt=1 :id=annotateId v-after>kaidah berpikir</annotate>; 
+    <annotate tag="span" class="slidev-vclick-true-hidden" :mark="{ type: 'highlight', color: '#000', strokeWidth: 8 }" :markAt=1 :id=annotateId v-after>kaidah berpikir</annotate>; 
     2. jalan pikiran yang <span class="slidev-vclick-true-hidden" v-after.hide>masuk akal</span>
-    <annotate tag="span" class="slidev-vclick-true-hidden" :mark="{ type: 'highlight', color: '#9ed0ff', strokeWidth: 8 }" :markAt=1 :id=annotateId v-after>masuk akal</annotate>;
+    <annotate tag="span" class="slidev-vclick-true-hidden" :mark="{ type: 'highlight', color: '#000', strokeWidth: 8 }" :markAt=1 :id=annotateId v-after>masuk akal</annotate>;
   </div>
 </div>
 
 ---
 layout: default
-class: bg-secondary text-neutral-900 flex flex-col justify-center align-center
+class: bg-primary text-white flex flex-col justify-center align-center
 annotateId: sistematis
 ---
 
@@ -246,7 +240,7 @@ const annotateId = "sistematis";
 </script>
 
 <div class="relative flex justify-center mb-8">
-  <annotate class="grid-inline whitespace-nowrap text-6xl" :mark="{ type: 'highlight', color: '#9ed0ff', strokeWidth: 8 }" :id=annotateId >Berpikir Secara Sistematis</annotate>
+  <annotate class="grid-inline whitespace-nowrap text-6xl px-6" :mark="{ type: 'highlight', color: '#000', strokeWidth: 8 }" :id=annotateId >Berpikir Sistematis</annotate>
   
   <img src="/nerd.gif" class="absolute top-1/2 transform -translate-y-1/2 left-0 w-120px" />
 
@@ -265,7 +259,7 @@ const annotateId = "sistematis";
 
 ---
 layout: default
-class: bg-secondary text-neutral-900 flex flex-col justify-center align-center
+class: bg-primary text-white flex flex-col justify-center align-center
 annotateId: masuk-akal
 ---
 
@@ -276,7 +270,7 @@ const annotateId = "masuk-akal";
 </script>
 
 <div class="relative flex justify-center mb-8">
-  <annotate class="grid-inline whitespace-nowrap text-6xl" :mark="{ type: 'highlight', color: '#9ed0ff', strokeWidth: 8 }" :id=annotateId >Berpikir Yang Masuk Akal</annotate>
+  <annotate class="grid-inline whitespace-nowrap text-6xl px-6" :mark="{ type: 'highlight', color: '#000', strokeWidth: 8 }" :id=annotateId >Berpikir Masuk Akal</annotate>
   
   <img src="/thinkthinkbukanpermen.gif" class="absolute top-1/2 transform -translate-y-1/2 left-0 w-120px" />
 
@@ -295,7 +289,7 @@ const annotateId = "masuk-akal";
 
 ---
 layout: default
-class: bg-secondary text-neutral-900 text-9xl
+class: bg-primary text-white text-9xl
 annotateId: prinsip-kiss
 ---
 
@@ -367,7 +361,7 @@ const annotateId = "prinsip-kiss";
 
 ---
 layout: default
-class: bg-secondary text-neutral-900 flex flex-col justify-center align-center
+class: bg-primary text-white flex flex-col justify-center align-center
 annotateId: efisien
 ---
 
@@ -378,7 +372,7 @@ const annotateId = "efisien";
 </script>
 
 <div class="relative flex justify-center mb-8">
-  <annotate class="grid-inline whitespace-nowrap text-6xl" :mark="{ type: 'highlight', color: '#9ed0ff', strokeWidth: 8 }" :id=annotateId >Berpikir Secara Efisien</annotate>
+  <annotate class="grid-inline whitespace-nowrap text-6xl px-6" :mark="{ type: 'highlight', color: '#000', strokeWidth: 8 }" :id=annotateId >Berpikir Efisien</annotate>
 </div>
 
 <img src="/elmodenganlatarbelakangyangsangatberapiapi.gif" class="absolute top-1/2 transform -translate-y-1/2 left-30px w-150px" />
@@ -392,7 +386,7 @@ const annotateId = "efisien";
 
 ---
 layout: default
-class: bg-secondary h-full text-primary
+class: bg-secondary flex flex-col justify-center align-center
 annotateId: mengapa
 ---
 
@@ -402,28 +396,83 @@ annotateId: mengapa
 const annotateId = "mengapa";
 </script>
 
-<div class="absolute w-full h-full top-0 left-0 flex flex-col justify-center" v-click.hide="1">
-  <shuffled 
-    class="inline-grid mx-auto text-9xl text-red-500 whitespace-nowrap"
-    :id=annotateId
-  >
-    Mengapa kita perlu
-  </shuffled>
-  <shuffled 
-    class="inline-grid mx-auto text-9xl text-red-500 whitespace-nowrap"
-    :id=annotateId
-  >
-    Berpikir logis?
-  </shuffled>
-</div>
+<shuffled 
+  class="inline-grid mx-auto text-9xl text-red-500 whitespace-nowrap"
+  :id=annotateId
+>
+  Mengapa kita perlu
+</shuffled>
+<shuffled 
+  class="inline-grid mx-auto text-9xl text-red-500 whitespace-nowrap"
+  :id=annotateId
+>
+  Berpikir logis?
+</shuffled>
 
-<div class="absolute w-full h-full top-0 left-0 flex flex-col justify-center" v-click="1">
+---
+layout: default
+class: bg-secondary w-full h-full text-primary
+annotateId: intuisi
+---
+
+# Intuisi
+
+<script setup>
+const annotateId = "intuisi";
+</script>
+
+<div class="absolute w-full h-full top-0 left-0 flex flex-col justify-center bg-primary">
   <img src="/spongebobintuisi.png" class="mx-auto h-400px" />
 </div>
 
 ---
 layout: default
-class: bg-primary text-white text-center flex justify-center items-center
+class: bg-secondary flex flex-col justify-center align-center
+annotateId: kesalahan-berpikir
+---
+
+# Kesalahan Berpikir
+
+<script setup>
+const annotateId = "kesalahan-berpikir";
+</script>
+
+<shuffled 
+  class="inline-grid mx-auto text-9xl text-red-500 whitespace-nowrap"
+  :id=annotateId
+>
+  Seperti Apa Bentuk
+</shuffled>
+<shuffled 
+  class="inline-grid mx-auto text-9xl text-red-500 whitespace-nowrap"
+  :id=annotateId
+>
+  Kesalahan Berpikir?
+</shuffled>
+
+---
+layout: default
+class: bg-primary w-full h-full text-white
+annotateId: eksploitasi-moral
+---
+
+# Eksploitasi Moral
+
+<script setup>
+const annotateId = "eksploitasi-moral";
+</script>
+
+<div class="relative text-center text-4xl mb-8">Ekploitasi Moral</div>
+
+<div class="relative w-full h-400px">
+  <img src="/haramarhara.png" class="w-auto h-full mx-auto" />
+  <img src="/kucingkepalakumemikirkandia.gif" class="absolute left-0 top-1/2 transform -translate-y-1/2 w-150px" v-click="1" />
+  <img src="/kucingkepalakumemikirkandia.gif" class="absolute right-0 top-1/2 transform -translate-y-1/2 w-150px" v-click="1" />
+</div>
+
+---
+layout: default
+class: bg-secondary text-white text-center flex justify-center items-center
 annotateId: penutup
 ---
 
@@ -433,14 +482,17 @@ annotateId: penutup
 const annotateId = "penutup";
 </script>
 
-<annotate 
-  class="text-9xl text-neutral-900 px-10 py-4" 
-  :mark="{ type: 'highlight', color: '#bfee1d', strokeWidth: 10 }"
-  :id="annotateId"
-  v-motion
-  :initial="{ opacity: 0 }"
-  :enter="{ opacity: 1 }"
-  :leave="{ opacity: 0 }"
->
+<div class="text-9xl text-neutral-900">
   Sekian dan <br />Terima Kasih
-</annotate>
+</div>
+
+<img src="/kucinginjoget.gif" class="absolute w-150px" style="left: 30px; top: 40px" />
+<img src="/kucingpopoapasihpopopopo.gif" class="absolute w-150px" style="left: 50px; bottom: 50px" />
+<img src="/ohhhhhhhhhhhh.gif" class="absolute w-120px" style="right: 360px; top: 10px" />
+<img src="/vibing.gif" class="absolute w-100px" style="left: 380px; top: 30px" />
+<img src="/icikiwir.gif" class="absolute w-100px" style="left: 220px; top: 10px" />
+<img src="/gigelgigel.gif" class="absolute w-130px" style="right: 220px; top: 10px;  transform: scaleX(-1)" />
+<img src="/kucingintepuktangan.gif" class="absolute w-250px" style="right: 220px; bottom: 0px; transform: scaleX(-1)" />
+<img src="/kucingindadadada.gif" class="absolute w-180px" style="left: 300px; bottom: 0px" />
+<img src="/uiiaiuiiiai.gif" class="absolute w-275px" style="right: -30px; top: 0px" />
+<img src="/hepihepihepi.gif" class="absolute w-250px" style="right: -40px; bottom: 0px" />
