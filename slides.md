@@ -185,13 +185,13 @@ const annotateId = "bagaimana";
 </script>
 
 <shuffled 
-  class="inline-grid mx-auto text-9xl text-red-500 whitespace-nowrap"
+  class="font-bold inline-grid mx-auto text-9xl text-red-500 whitespace-nowrap"
   :id=annotateId
 >
   Berpikir Logis Itu
 </shuffled>
 <shuffled 
-  class="inline-grid mx-auto text-9xl text-red-500 whitespace-nowrap"
+  class="font-bold inline-grid mx-auto text-9xl text-red-500 whitespace-nowrap"
   :id=annotateId
 >
   Bagaimana?
@@ -397,13 +397,13 @@ const annotateId = "mengapa";
 </script>
 
 <shuffled 
-  class="inline-grid mx-auto text-9xl text-red-500 whitespace-nowrap"
+  class="font-bold inline-grid mx-auto text-9xl text-red-500 whitespace-nowrap"
   :id=annotateId
 >
   Mengapa kita perlu
 </shuffled>
 <shuffled 
-  class="inline-grid mx-auto text-9xl text-red-500 whitespace-nowrap"
+  class="font-bold inline-grid mx-auto text-9xl text-red-500 whitespace-nowrap"
   :id=annotateId
 >
   Berpikir logis?
@@ -438,13 +438,13 @@ const annotateId = "kesalahan-berpikir";
 </script>
 
 <shuffled 
-  class="inline-grid mx-auto text-9xl text-red-500 whitespace-nowrap"
+  class="font-bold inline-grid mx-auto text-9xl text-red-500 whitespace-nowrap"
   :id=annotateId
 >
   Seperti Apa Bentuk
 </shuffled>
 <shuffled 
-  class="inline-grid mx-auto text-9xl text-red-500 whitespace-nowrap"
+  class="font-bold inline-grid mx-auto text-9xl text-red-500 whitespace-nowrap"
   :id=annotateId
 >
   Kesalahan Berpikir?
@@ -469,6 +469,43 @@ const annotateId = "eksploitasi-moral";
   <img src="/kucingkepalakumemikirkandia.gif" class="absolute left-0 top-1/2 transform -translate-y-1/2 w-150px" v-click="1" />
   <img src="/kucingkepalakumemikirkandia.gif" class="absolute right-0 top-1/2 transform -translate-y-1/2 w-150px" v-click="1" />
 </div>
+
+---
+layout: default
+class: bg-secondary relative w-full h-full flex flex-col text-neutral-900
+annotateId: game
+---
+
+# Game
+
+<script setup>
+const annotateId = "game";
+</script>
+
+<div class="relative w-full text-center py-4">
+  <shuffled 
+    tag="span"
+    :id=annotateId 
+    class="font-bold text-8xl px-8 text-red-500"
+  >Simulasi Ngoding Game</shuffled>
+</div>
+
+<div class="relative flex-1 items-center text-center">
+  <div class="absolute left-1/2 transform -translate-x-1/2" style="top: 10px" v-click="1">
+    <div class="text-4xl font-bold">Komputer</div>
+    <div class="text-5xl">Otaknya Aditya Rahmanda</div>
+  </div>
+  <div class="absolute left-0 top-240px transform -translate-y-1/2 w-300px" v-click="2">
+    <div class="text-4xl font-bold">Bahasa Pemograman</div>
+    <div class="text-5xl">Bahasa Oral Indonesia</div>
+  </div>
+  <div class="absolute right-0 top-240px transform -translate-y-1/2 w-300px" v-click="3">
+    <div class="text-4xl font-bold">Tujuan</div>
+    <div class="text-5xl">Masukin bulpen ke gelas</div>
+  </div>
+</div>
+
+<img src="/gamecumi.gif" class="absolute w-275px bottom-0 left-1/2 transform -translate-x-1/2" />
 
 ---
 layout: default
