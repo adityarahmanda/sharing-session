@@ -4,6 +4,7 @@ titleTemplate: '%s - Aditya Nur Juang Rahmanda'
 theme: ./
 layout: full
 author: Aditya Rahmanda
+favicon: '#'
 monaco: false
 mermaid: false
 defaults:
@@ -32,7 +33,7 @@ const annotateId = "pembuka";
 
 <div class="w-full mt-8">
   <marquee direction="left" class="marquee font-bold text-4xl" :duration=60>
-  inġeþanc rihtlīċ | 逻辑思维 | ꦩꦶꦏꦶꦂꦭꦺꦴꦒꦶꦱ꧀ | pensar lógicamente | 논리적 사고 | <ruby>論<rt>ろん</rt></ruby><ruby>理<rt>り</rt></ruby><ruby>的<rt>てき</rt></ruby><ruby>思<rt>し</rt></ruby><ruby>考<rt>こう</rt></ruby> | 𑼪𑼶𑼒𑼶𑼂𑼭𑼾𑼴𑼔𑼶𑼱𑽁 | التفكير المنطقي | ᮙᮤᮊᮤᮁ ᮜᮧᮌᮤᮞ᮪ | ᨅ ᨙᨑᨛᨄᨗᨀᨗᨑᨛ ᨒᨚᨁᨗᨔᨛ | 
+  inġeþanc rihtlīċ | 逻辑思维 | ꦩꦶꦏꦶꦂꦭꦺꦴꦒꦶꦱ꧀ | pensar lógicamente | 논리적 사고 | <ruby>論<rt>ろん</rt></ruby><ruby>理<rt>り</rt></ruby><ruby>的<rt>てき</rt></ruby><ruby>思<rt>し</rt></ruby><ruby>考<rt>こう</rt></ruby> | 𑼪𑼶𑼒𑼶𑼂𑼭𑼾𑼴𑼔𑼶𑼱𑽁 | التفكير المنطقي | ᮙᮤᮊᮤᮁ ᮜᮧᮌᮤᮞ᮪ | ᨅ ᨙᨑᨛᨄᨗᨀᨗᨑᨛ ᨒᨚᨁᨗᨔᨛ |
   </marquee>
 </div>
 
@@ -71,28 +72,28 @@ const annotateId = "kilas-balik";
 
 <div class="relative mx-auto w-auto h-400px">
   <img src="/kebongelap.jpg" class="h-full" v-click="1" />
-  <img src="/blekcat.gif" 
-    class="absolute h-100px" 
-    style="left: 50px; top: 100px" 
+  <img src="/blekcat.gif"
+    class="absolute h-100px"
+    style="left: 50px; top: 100px"
     v-click="2"
   />
-  <img src="/blekcat.gif" 
-    class="absolute h-100px" 
-    style="left: 280px; top: 150px" 
+  <img src="/blekcat.gif"
+    class="absolute h-100px"
+    style="left: 280px; top: 150px"
     v-click="2"
   />
-  <img src="/blekcat.gif" 
-    class="absolute h-100px" 
-    style="right: 50px; bottom: 100px" 
+  <img src="/blekcat.gif"
+    class="absolute h-100px"
+    style="right: 50px; bottom: 100px"
     v-click="2"
   />
-  <img src="/bananananacat.gif" 
-    class="cat anim-disabled absolute left-0 bottom-0 w-150px h-150px" 
+  <img src="/bananananacat.gif"
+    class="cat anim-disabled absolute left-0 bottom-0 w-150px h-150px"
       :data-clicks="$slidev.nav.clicks"
       v-click="3"
   />
-  <img src="/bananacat.gif" 
-    class="cat-cry anim-disabled absolute left-0 bottom-0 w-100px h-100px" 
+  <img src="/bananacat.gif"
+    class="cat-cry anim-disabled absolute left-0 bottom-0 w-100px h-100px"
       :data-clicks="$slidev.nav.clicks"
       v-click="3"
   />
@@ -170,7 +171,7 @@ const annotateId = "memahami";
   <img src="/evolusi.png" class="absolute h-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" v-click="[1, 2]" />
   <img src="/evolusiadit.png" class="absolute h-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" v-click="[2, 3]" />
   <img src="/ummi.jpeg" class="absolute h-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" v-click="3" />
-</div> 
+</div>
 
 ---
 layout: default
@@ -184,13 +185,13 @@ annotateId: bagaimana
 const annotateId = "bagaimana";
 </script>
 
-<shuffled 
+<shuffled
   class="font-bold inline-grid mx-auto text-9xl text-red-500 whitespace-nowrap"
   :id=annotateId
 >
   Berpikir Logis Itu
 </shuffled>
-<shuffled 
+<shuffled
   class="font-bold inline-grid mx-auto text-9xl text-red-500 whitespace-nowrap"
   :id=annotateId
 >
@@ -210,8 +211,8 @@ const annotateId = "definisi";
 </script>
 
 <div class="relative flex flex-col justify-center align-center text-center px-10 h-full">
-  <annotate 
-    style="font-size: 14rem; line-height:1; margin-bottom: -2rem" 
+  <annotate
+    style="font-size: 14rem; line-height:1; margin-bottom: -2rem"
     :mark="{ type: 'bracket', brackets: ['left', 'right'], color: '#ef4444', strokeWidth: 8 }"
     :markAt=0
     :hideMarkAt=1
@@ -219,9 +220,9 @@ const annotateId = "definisi";
   >
     /lo·gi·ka/
   </annotate>
-  <div class="text-3xl">
+  <div class="text-3xl text-secondary">
     1. pengetahuan tentang <span class="slidev-vclick-true-hidden" v-click.hide>kaidah berpikir</span>
-    <annotate tag="span" class="slidev-vclick-true-hidden" :mark="{ type: 'highlight', color: '#000', strokeWidth: 8 }" :markAt=1 :id=annotateId v-after>kaidah berpikir</annotate>; 
+    <annotate tag="span" class="slidev-vclick-true-hidden" :mark="{ type: 'highlight', color: '#000', strokeWidth: 8 }" :markAt=1 :id=annotateId v-after>kaidah berpikir</annotate>;
     2. jalan pikiran yang <span class="slidev-vclick-true-hidden" v-after.hide>masuk akal</span>
     <annotate tag="span" class="slidev-vclick-true-hidden" :mark="{ type: 'highlight', color: '#000', strokeWidth: 8 }" :markAt=1 :id=annotateId v-after>masuk akal</annotate>;
   </div>
@@ -241,19 +242,19 @@ const annotateId = "sistematis";
 
 <div class="relative flex justify-center mb-8">
   <annotate class="grid-inline whitespace-nowrap text-6xl px-6" :mark="{ type: 'highlight', color: '#000', strokeWidth: 8 }" :id=annotateId >Berpikir Sistematis</annotate>
-  
+
   <img src="/nerd.gif" class="absolute top-1/2 transform -translate-y-1/2 left-0 w-120px" />
 
   <img src="/nerd.gif" class="absolute top-1/2 transform -translate-y-1/2 right-0 w-120px" />
 </div>
 
 <div class="relative w-full mb-8">
-  <div class="text-3xl text-center mb-2">Runtutan Ngopi (Alternatif 1)</div>
+  <div class="text-3xl text-center text-secondary mb-2">Runtutan Ngopi (Alternatif 1)</div>
   <img src="/kopi-1.svg" />
 </div>
 
 <div class="relative w-full">
-  <div class="text-3xl text-center mb-2">Runtutan Ngopi (Alternatif 2)</div>
+  <div class="text-3xl text-center text-secondary mb-2">Runtutan Ngopi (Alternatif 2)</div>
   <img src="/kopi-2.svg" />
 </div>
 
@@ -271,19 +272,19 @@ const annotateId = "masuk-akal";
 
 <div class="relative flex justify-center mb-8">
   <annotate class="grid-inline whitespace-nowrap text-6xl px-6" :mark="{ type: 'highlight', color: '#000', strokeWidth: 8 }" :id=annotateId >Berpikir Masuk Akal</annotate>
-  
+
   <img src="/thinkthinkbukanpermen.gif" class="absolute top-1/2 transform -translate-y-1/2 left-0 w-120px" />
 
   <img src="/thinkthinkbukanpermen.gif" class="absolute top-1/2 transform -translate-y-1/2 right-0 w-120px" />
 </div>
 
 <div class="relative w-full mb-8">
-  <div class="text-3xl text-center mb-2">Ngopi Nggak Masuk Akal</div>
+  <div class="text-3xl text-center text-secondary mb-2">Ngopi Nggak Masuk Akal</div>
   <img src="/kopi-error-1.svg" />
 </div>
 
 <div class="relative w-full">
-  <div class="text-3xl text-center mb-2">Ngopi Nggak Masuk Akal Banget</div>
+  <div class="text-3xl text-center text-secondary mb-2">Ngopi Nggak Masuk Akal Banget</div>
   <img src="/kopi-error-2.svg" />
 </div>
 
@@ -300,20 +301,20 @@ const annotateId = "prinsip-kiss";
 </script>
 
 <div class="relative w-full h-full" >
-  <annotate 
-    class="absolute h-full" 
+  <annotate
+    class="absolute h-full"
     :mark="{ type: 'bracket', brackets: ['left', 'right'], color: '#ef4444', strokeWidth: 10 }"
     :id="annotateId"
     style="width: 5rem"
   />
-  
+
   <img src="/catcium.gif" class="absolute h-400px top-1/2 left-1/2 transform  -translate-y-1/2" />
 
   <div class="flex">
-    <shuffled 
+    <shuffled
       class="grid-inline slidev-vclick-true-hidden text-center px-4 mr-6"
       :id="annotateId"
-      :sortAt=0 
+      :sortAt=0
       :showAt=0
       style="width: 5rem"
     >K</shuffled>
@@ -322,10 +323,10 @@ const annotateId = "prinsip-kiss";
     <shuffled class="grid-inline slidev-vclick-true-hidden" v-click="2" :id="annotateId" :sortAt=2 :showAt=2>esederhanaan</shuffled>
   </div>
   <div class="flex">
-    <shuffled 
+    <shuffled
       class="grid-inline slidev-vclick-true-hidden text-center px-4 mr-6"
       :id="annotateId"
-      :sortAt=0 
+      :sortAt=0
       :showAt=0
       style="width: 5rem"
     >I</shuffled>
@@ -334,10 +335,10 @@ const annotateId = "prinsip-kiss";
     <shuffled class="grid-inline slidev-vclick-true-hidden" v-click="2" :id="annotateId" :sortAt=2 :showAt=2>tu</shuffled>
   </div>
   <div class="flex">
-    <shuffled 
+    <shuffled
       class="grid-inline slidev-vclick-true-hidden text-center px-4 mr-6"
       :id="annotateId"
-      :sortAt=0 
+      :sortAt=0
       :showAt=0
       style="width: 5rem"
     >S</shuffled>
@@ -346,16 +347,16 @@ const annotateId = "prinsip-kiss";
     <shuffled class="grid-inline slidev-vclick-true-hidden" v-click="2" :id="annotateId" :sortAt=2 :showAt=2>elalu</shuffled>
   </div>
   <div class="flex">
-    <shuffled 
+    <shuffled
       class="grid-inline slidev-vclick-true-hidden text-center px-4 mr-6"
       :id="annotateId"
-      :sortAt=0 
+      :sortAt=0
       :showAt=0
       style="width: 5rem"
     >S</shuffled>
     <shuffled class="grid-inline slidev-vclick-true-hidden" v-click.hide="1" :id="annotateId">?????</shuffled>
     <shuffled class="grid-inline slidev-vclick-true-hidden" v-click="[1, 2]" :id="annotateId" :sortAt=1 :showAt=1>tup*d</shuffled>
-    <shuffled class="grid-inline slidev-vclick-true-hidden" v-click="2" :id="annotateId" :sortAt=2 :showAt=2>olusinya</shuffled> 
+    <shuffled class="grid-inline slidev-vclick-true-hidden" v-click="2" :id="annotateId" :sortAt=2 :showAt=2>olusinya</shuffled>
   </div>
 </div>
 
@@ -380,7 +381,7 @@ const annotateId = "efisien";
 <img src="/elmodenganlatarbelakangyangsangatberapiapi.gif" class="absolute top-1/2 transform -translate-y-1/2 right-30px w-150px" />
 
 <div class="relative w-full">
-  <div class="text-3xl text-center mb-2">Ngopi Efisien</div>
+  <div class="text-3xl text-center text-secondary mb-2">Ngopi Efisien</div>
   <img src="/kopi-efisien.svg" class="w-500px mx-auto" />
 </div>
 
@@ -396,13 +397,13 @@ annotateId: mengapa
 const annotateId = "mengapa";
 </script>
 
-<shuffled 
+<shuffled
   class="font-bold inline-grid mx-auto text-9xl text-red-500 whitespace-nowrap"
   :id=annotateId
 >
   Mengapa kita perlu
 </shuffled>
-<shuffled 
+<shuffled
   class="font-bold inline-grid mx-auto text-9xl text-red-500 whitespace-nowrap"
   :id=annotateId
 >
@@ -437,13 +438,13 @@ annotateId: kesalahan-berpikir
 const annotateId = "kesalahan-berpikir";
 </script>
 
-<shuffled 
+<shuffled
   class="font-bold inline-grid mx-auto text-9xl text-red-500 whitespace-nowrap"
   :id=annotateId
 >
   Seperti Apa Bentuk
 </shuffled>
-<shuffled 
+<shuffled
   class="font-bold inline-grid mx-auto text-9xl text-red-500 whitespace-nowrap"
   :id=annotateId
 >
@@ -452,7 +453,7 @@ const annotateId = "kesalahan-berpikir";
 
 ---
 layout: default
-class: bg-primary w-full h-full text-white
+class: bg-primary w-full h-full text-white flex flex-col
 annotateId: eksploitasi-moral
 ---
 
@@ -462,12 +463,78 @@ annotateId: eksploitasi-moral
 const annotateId = "eksploitasi-moral";
 </script>
 
-<div class="relative text-center text-4xl mb-8">Ekploitasi Moral</div>
+<div class="relative text-center text-4xl font-bold">Ekploitasi Moral</div>
+<div class="relative flex justify-center mb-4">
+  <annotate
+    class="text-2xl px-4 text-secondary"
+    :mark="{ type: 'strike-through', color: '#ef4444' }"
+    :markAt="1"
+    :id="annotateId"
+  >Orang Baik == Bisa Dimanfaatin Sesuka Hati</annotate>
+</div>
 
-<div class="relative w-full h-400px">
-  <img src="/haramarhara.png" class="w-auto h-full mx-auto" />
+<div class="relative w-full flex-1">
+  <img src="/haramarhara.png" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-full" />
   <img src="/kucingkepalakumemikirkandia.gif" class="absolute left-0 top-1/2 transform -translate-y-1/2 w-150px" v-click="1" />
   <img src="/kucingkepalakumemikirkandia.gif" class="absolute right-0 top-1/2 transform -translate-y-1/2 w-150px" v-click="1" />
+</div>
+
+---
+layout: default
+class: bg-primary w-full h-full text-white flex flex-col
+annotateId: oversimplikasi
+---
+
+# Oversimplikasi
+
+<script setup>
+const annotateId = "oversimplikasi";
+</script>
+
+<div class="relative text-center text-4xl font-bold">Oversimplikasi</div>
+<div class="relative flex justify-center mb-4">
+  <annotate
+    class="text-2xl px-4 text-secondary"
+    :mark="{ type: 'strike-through', color: '#ef4444' }"
+    :markAt="1"
+    :id="annotateId"
+  >Nitip Ortu ke Panti Jompo == Durhaka</annotate>
+</div>
+
+<div class="relative w-full flex-1">
+  <img src="/ortujompomeme.png" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-full" v-click.hide="2" />
+  <img src="/ortujompoquora.png" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-full" v-click="2" />
+  <img src="/tidaksesederhanaitukawan.gif" class="absolute left-0 top-1/2 transform -translate-y-1/2 w-175px" v-click="[1, 2]" />
+  <img src="/tidaksesederhanaitukawan.gif" class="absolute right-0 top-1/2 transform -translate-y-1/2 w-175px" v-click="[1, 2]" />
+</div>
+
+---
+layout: default
+class: bg-primary w-full h-full text-white flex flex-col
+annotateId: bias-penyintas
+---
+
+# Bias Penyintas
+
+<script setup>
+const annotateId = "bias-penyintas";
+</script>
+
+<div class="relative text-center text-4xl font-bold">Bias Penyintas</div>
+<div class="relative flex justify-center mb-4">
+  <annotate
+    class="text-2xl px-4 text-secondary"
+    :mark="{ type: 'strike-through', color: '#ef4444' }"
+    :markAt="1"
+    :id="annotateId"
+  >Nikah Susah Hamil, Di Luar Nikah Gampang Hamil</annotate>
+</div>
+
+<div class="relative flex-1 w-full">
+  <img src="/wandahamilmeme.png" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-full" v-click.hide="2" />
+  <img src="/wandahamilquora.png" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-full" v-click="2" />
+  <img src="/tuanbias.gif" class="absolute left-0 top-1/2 transform -translate-y-1/2 w-200px" v-click="[1, 2]" />
+  <img src="/tuanbias.gif" class="absolute right-0 top-1/2 transform -translate-y-1/2 w-200px" v-click="[1, 2]" />
 </div>
 
 ---
@@ -483,9 +550,9 @@ const annotateId = "game";
 </script>
 
 <div class="relative w-full text-center py-4">
-  <shuffled 
+  <shuffled
     tag="span"
-    :id=annotateId 
+    :id=annotateId
     class="font-bold text-8xl px-8 text-red-500"
   >Simulasi Ngoding Game</shuffled>
 </div>
@@ -501,7 +568,7 @@ const annotateId = "game";
   </div>
   <div class="absolute right-0 top-240px transform -translate-y-1/2 w-300px" v-click="3">
     <div class="text-4xl font-bold">Tujuan</div>
-    <div class="text-5xl">Masukin bulpen ke gelas</div>
+    <div class="text-5xl">Masukin bulpen ke dalam gelas</div>
   </div>
 </div>
 
@@ -509,7 +576,7 @@ const annotateId = "game";
 
 ---
 layout: default
-class: bg-secondary text-white text-center flex justify-center items-center
+class: bg-secondary text-neutral-900 text-center flex flex-col justify-center items-center
 annotateId: penutup
 ---
 
@@ -519,9 +586,20 @@ annotateId: penutup
 const annotateId = "penutup";
 </script>
 
-<div class="text-9xl text-neutral-900">
-  Sekian dan <br />Terima Kasih
-</div>
+<shuffled
+  class="font-bold inline-grid mx-auto text-9xl text-red-500 whitespace-nowrap"
+  style="margin-bottom: -20px"
+  :id=annotateId
+>
+  Terima Kasih
+</shuffled>
+
+<shuffled
+  class="inline-grid mx-auto text-4xl whitespace-nowrap"
+  :id=annotateId
+>
+  #Slidev #RoughNotation #VueJS #TailwindCSS
+</shuffled>
 
 <img src="/kucinginjoget.gif" class="absolute w-150px" style="left: 30px; top: 40px" />
 <img src="/kucingpopoapasihpopopopo.gif" class="absolute w-150px" style="left: 50px; bottom: 50px" />
