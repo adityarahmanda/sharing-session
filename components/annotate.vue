@@ -6,7 +6,7 @@
 
 <script setup>
 import { ref, onMounted, watch } from 'vue'
-import { annotate } from 'rough-notation'
+import { annotate } from '@slidev/rough-notation'
 import { useNav } from '@slidev/client'
 
 const { clicks, currentSlideNo, slides } = useNav()

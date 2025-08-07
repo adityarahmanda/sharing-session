@@ -474,9 +474,12 @@ const annotateId = "eksploitasi-moral";
 </div>
 
 <div class="relative w-full flex-1">
-  <img src="/haramarhara.png" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-full" />
-  <img src="/kucingkepalakumemikirkandia.gif" class="absolute left-0 top-1/2 transform -translate-y-1/2 w-150px" v-click="1" />
-  <img src="/kucingkepalakumemikirkandia.gif" class="absolute right-0 top-1/2 transform -translate-y-1/2 w-150px" v-click="1" />
+  <a href="https://www.instagram.com/reel/DLgW5s2yfrf/" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-full" target="_blank"  style="border-bottom-width: 0" v-click.hide="2">
+    <img src="/haramarhara.png" class="h-full" />
+  </a>
+  <img src="/katakataseorangbijakyangmanaituakusendiri.png" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[400px] h-auto" v-click="2" />
+  <img src="/kucingkepalakumemikirkandia.gif" class="absolute left-0 top-1/2 transform -translate-y-1/2 w-150px" v-click="[1, 2]" />
+  <img src="/kucingkepalakumemikirkandia.gif" class="absolute right-0 top-1/2 transform -translate-y-1/2 w-150px" v-click="[1, 2]" />
 </div>
 
 ---
@@ -511,30 +514,34 @@ const annotateId = "oversimplikasi";
 ---
 layout: default
 class: bg-primary w-full h-full text-white flex flex-col
-annotateId: bias-penyintas
+annotateId: bias-kesintasan
 ---
 
 # Bias Penyintas
 
 <script setup>
-const annotateId = "bias-penyintas";
+const annotateId = "bias-kesintasan";
 </script>
 
-<div class="relative text-center text-4xl font-bold">Bias Penyintas</div>
-<div class="relative flex justify-center mb-4">
+<div class="relative text-center text-4xl font-bold">Bias Kesintasan</div>
+<div class="relative flex justify-center py-3 mb-4">
   <annotate
-    class="text-2xl px-4 text-secondary"
-    :mark="{ type: 'strike-through', color: '#ef4444' }"
+    class="text-2xl text-secondary leading-[.5]"
+    :mark="{ type: 'underline', color: '#ef4444' }"
     :markAt="1"
     :id="annotateId"
-  >Nikah Susah Hamil, Di Luar Nikah Gampang Hamil</annotate>
+  >
+    <span>Jadi Perintis Itu Asik</span><span class="slidev-vclick-true-hidden ml-1" v-click="1">(Buat yang hidupnya terjamin aja)</span>
+  </annotate>
 </div>
 
 <div class="relative flex-1 w-full">
-  <img src="/wandahamilmeme.png" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-full" v-click.hide="2" />
-  <img src="/wandahamilquora.png" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-full" v-click="2" />
-  <img src="/tuanbias.gif" class="absolute left-0 top-1/2 transform -translate-y-1/2 w-200px" v-click="[1, 2]" />
-  <img src="/tuanbias.gif" class="absolute right-0 top-1/2 transform -translate-y-1/2 w-200px" v-click="[1, 2]" />
+  <a href="https://www.instagram.com/reel/DMUSynMTg7M/" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-full" target="_blank" style="border-bottom-width: 0">
+    <img src="/perintismerintisrintisandandirintisrintisrintis.png" class="h-full" v-click.hide="2" />
+  </a>
+  <img src="/perintismerintisrintisandandirintisrintisrintisquora.png" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-full" v-click="2" />
+  <img src="/tidakseseruyangandaungkapkan.gif" class="absolute left-0 top-1/2 transform -translate-y-1/2 w-200px" v-click="[1, 2]" />
+  <img src="/tidakseseruyangandaungkapkan.gif" class="absolute right-0 top-1/2 transform -translate-y-1/2 w-200px" v-click="[1, 2]" />
 </div>
 
 ---
@@ -567,12 +574,35 @@ const annotateId = "game";
     <div class="text-5xl">Bahasa Oral Indonesia</div>
   </div>
   <div class="absolute right-0 top-240px transform -translate-y-1/2 w-300px" v-click="3">
-    <div class="text-4xl font-bold">Tujuan</div>
-    <div class="text-5xl">Masukin bulpen ke dalam gelas</div>
+    <div class="text-4xl font-bold">Hasil Program</div>
+    <div class="text-5xl">Instruksikan Adit u/ Menggambar</div>
   </div>
 </div>
 
 <img src="/gamecumi.gif" class="absolute w-275px bottom-0 left-1/2 transform -translate-x-1/2" />
+
+---
+layout: full
+class: w-full h-full
+annotateId: drawing
+---
+
+# Drawing Canvas
+
+<script setup>
+const annotateId = "drawing";
+</script>
+
+<div class="absolute top-0 left-0 w-full h-full" style="background: #faffcb"></div>
+
+<div class="relative text-center py-8 w-full h-full flex justify-center items-center bg-secondary" v-click.hide="1">
+  <shuffled tag="span" class="font-bold text-8xl px-8 text-red-500" :id=annotateId>Sekarang Instruksikan Adit untuk Menggambar</shuffled>
+</div>
+
+<style scoped>
+.container[data-clicks="1"] {
+}
+</style>
 
 ---
 layout: default
